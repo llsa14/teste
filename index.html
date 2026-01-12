@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensagens Cooperativa - Perfil</title>
+    <!-- Ícones FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="navbar-left">
+            <img src="softex-logo.png" alt="Softex Recife" class="logo-softex">
+            
+            <div class="system-identity">
+                <span class="mc-icon">MC</span>
+                <div class="system-text">
+                    <strong>Mensagens Cooperativa</strong>
+                    <span>Comunicação Acadêmica</span>
+                </div>
+            </div>
+        </div>
+        
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <nav class="navbar-right">
+            <a href="#" class="nav-link"><i class="fa-solid fa-border-all"></i> <span class="link-text">Dashboard</span></a>
+            <a href="#" class="nav-link"><i class="fa-regular fa-paper-plane"></i> <span class="link-text">Nova Campanha</span></a>
+            <a href="#" class="nav-link"><i class="fa-solid fa-users"></i> <span class="link-text">Gerenciar Contatos</span></a>
+            
+            <div class="nav-icons">
+                <button class="icon-btn"><i class="fa-solid fa-cog"></i></button>
+                <button class="icon-btn"><i class="fa-regular fa-circle-question"></i></button>
+                <button class="icon-btn"><i class="fa-solid fa-arrow-right-from-bracket"></i></button>
+            </div>
+        </nav>
+    </header>
+
+    <div class="main-container">
+        
+        <!-- Sidebar: O estilo mudou no CSS para parecer o card da imagem -->
+        <aside class="sidebar">
+            <div class="sidebar-card">
+                <h3>Menu</h3>
+                <ul id="sidebar-menu">
+                    <li class="menu-item active" onclick="navegar(this, 'perfil')">
+                        <i class="fa-regular fa-user"></i> Perfil
+                    </li>
+                    <li class="menu-item" onclick="navegar(this, 'preferencias')">
+                        <i class="fa-regular fa-clock"></i> Preferências de Envio
+                    </li>
+                    <li class="menu-item" onclick="navegar(this, 'notificacoes')">
+                        <i class="fa-regular fa-bell"></i> Notificações
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Área de Conteúdo -->
+        <main class="content-area">
+            
+            <!-- VIEW: PERFIL -->
+            <div id="view-perfil" class="view-section active">
+                <div class="card">
+                    <div class="card-header">
+                        <h2>Informações do Perfil</h2>
+                        <p>Gerencie suas informações pessoais</p>
+                    </div>
+
+                    <form class="profile-form" id="profileForm">
+                        <div class="form-group">
+                            <label>Nome completo</label>
+                            <div class="input-wrapper">
+                                <i class="fa-regular fa-user input-icon"></i>
+                                <input type="text" id="nome" value="João da Silva">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>CPF</label>
+                            <div class="input-wrapper">
+                                <i class="fa-regular fa-id-card input-icon"></i>
+                                <input type="text" id="cpf" value="123.456.789-00">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>E-mail</label>
+                            <div class="input-wrapper">
+                                <i class="fa-regular fa-envelope input-icon"></i>
+                                <input type="email" id="email" value="joao.silva@email.com">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Telefone</label>
+                            <div class="input-wrapper">
+                                <i class="fa-solid fa-phone input-icon"></i>
+                                <input type="tel" id="telefone" value="(11) 98765-4321">
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn-primary">
+                            <i class="fa-regular fa-floppy-disk"></i> Salvar Alterações
+                        </button>
+                    </form>
+
+                    <div class="divider"></div>
+
+                    <div class="card-footer-section">
+                        <div class="tutorial-header">
+                            <i class="fa-regular fa-circle-question"></i>
+                            <h3>Tutorial de Boas-Vindas</h3>
+                        </div>
+                        <p>Revise as funcionalidades principais da plataforma</p>
+                        
+                        <button class="btn-tutorial">
+                            <i class="fa-solid fa-book-open"></i>
+                            Ver Tutorial Novamente
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Views vazias -->
+            <div id="view-preferencias" class="view-section" style="display:none;">
+                <div class="card"><div class="card-header"><h2>Preferências</h2></div></div>
+            </div>
+            <div id="view-notificacoes" class="view-section" style="display:none;">
+                <div class="card"><div class="card-header"><h2>Notificações</h2></div></div>
+            </div>
+
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
