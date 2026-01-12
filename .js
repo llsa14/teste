@@ -12,7 +12,6 @@ function navegar(elemento, targetId) {
 
 document.addEventListener('DOMContentLoaded', () => {
     
-    // Feedback de Salvar
     const form = document.getElementById('profileForm');
     if(form) {
         form.addEventListener('submit', (e) => {

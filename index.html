@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mensagens Cooperativa - Perfil</title>
-    <!-- Ícones FontAwesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- CSS -->
+    <title>Configurações - Mensagens Cooperativa</title>
+    <!-- FontAwesome e Google Fonts -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,10 +14,19 @@
     <!-- Navbar -->
     <header class="navbar">
         <div class="navbar-left">
+            <!-- Logo Softex -->
             <img src="softex-logo.png" alt="Softex Recife" class="logo-softex">
             
+            <!-- Identidade Visual (MC + Texto) -->
             <div class="system-identity">
-                <span class="mc-icon">MC</span>
+                <!-- Ícone Composto (Círculo MC + Chat) -->
+                <div class="logo-composite">
+                    <div class="mc-circle">MC</div>
+                    <div class="mc-badge">
+                        <i class="fa-solid fa-comment-dots"></i>
+                    </div>
+                </div>
+
                 <div class="system-text">
                     <strong>Mensagens Cooperativa</strong>
                     <span>Comunicação Acadêmica</span>
@@ -44,7 +53,7 @@
 
     <div class="main-container">
         
-        <!-- Sidebar: O estilo mudou no CSS para parecer o card da imagem -->
+        <!-- Sidebar -->
         <aside class="sidebar">
             <div class="sidebar-card">
                 <h3>Menu</h3>
@@ -62,10 +71,9 @@
             </div>
         </aside>
 
-        <!-- Área de Conteúdo -->
+        <!-- Conteúdo -->
         <main class="content-area">
             
-            <!-- VIEW: PERFIL -->
             <div id="view-perfil" class="view-section active">
                 <div class="card">
                     <div class="card-header">
